@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#canvas{
+				background-color: gray;
+				width: 400px;
+				height: 400px;
+			}
+
+			/* 添加辅助线 */
+			body::after{
+				content: '';
+				display: block;
+				width: 1px;
+				height: 400px;
+				background-color: red;
+				position: absolute;
+				top: 0;
+				left: 200px;
+			}
+			body::before{
+				content: '';
+				display: block;
+				width: 400px;
+				height: 1px;
+				background-color: red;
+				position: absolute;
+				top: 200px;
+				left: 0;
+			}
+		</style>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/DrawAPoint1.js"></script>
+		<script src="../js/tools.js"></script>
+	</head>
+	<body onload="main()">
+		<canvas id="canvas">
+			请使用支持canvas的浏览器！
+		</canvas>
+	</body>
+</html>
